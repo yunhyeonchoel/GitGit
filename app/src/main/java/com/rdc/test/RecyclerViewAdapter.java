@@ -95,7 +95,7 @@ public class RecyclerViewAdapter extends
 
         @Override
         public void onItemSelected() {
-            itemView.setTranslationZ(10);
+            itemView.setTranslationZ(25);
         }
 
         @Override

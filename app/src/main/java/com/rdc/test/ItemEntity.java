@@ -1,9 +1,4 @@
 package com.rdc.test;
-
-/**
- * Created by Lin Yaotian on 2018/2/8.
- */
-
 public class ItemEntity {
     private String text;
     private boolean isChecked;

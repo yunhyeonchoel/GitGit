@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnStartDragListen
 
     private void initData() {
         mList = new ArrayList<>();
-        String [] strings = {"Android","后端","前端","iOS","人工智能","产品","工具资源","阅读","设计"};
+        String [] strings = {"스쿼트 10회\n크런치 10회\n레그레이즈 10회","스쿼트 20회\n크런치 20회\n레그레이즈 20회","휴식","스쿼트 30회\n크런치 30회\n레그레이즈 30회","휴식","스쿼트 40회\n크런치 40회\n레그레이즈 40회","휴식"};
         for (String string : strings) {
             ItemEntity item = new ItemEntity();
             item.setChecked(false);
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements OnStartDragListen
         adapter.setOnClickSwitchListener(new RecyclerViewAdapter.OnClickSwitchListener() {
             @Override
             public void onClick(int position, boolean isChecked) {
-                //实际开发中做发送请求等等一些处理
             }
         });
         recyclerView.setAdapter(adapter);
@@ -53,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements OnStartDragListen
 
     @Override
     public void onStartDrag(RecyclerView.ViewHolder viewHolder) {
-        //通知ItemTouchHelper开始拖拽
         mItemTouchHelper.startDrag(viewHolder);
     }
 }

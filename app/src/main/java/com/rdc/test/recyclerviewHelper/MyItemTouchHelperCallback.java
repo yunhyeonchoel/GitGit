@@ -14,11 +14,8 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-        //上下拖拽
         int dragFlags = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
-        //向右侧滑
-        int swipeFlags = ItemTouchHelper.RIGHT;
-        return makeMovementFlags(dragFlags, swipeFlags);
+        return makeMovementFlags(dragFlags,0);
     }
 
     @Override
@@ -48,9 +45,7 @@ public class MyItemTouchHelperCallback extends ItemTouchHelper.Callback {
     public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         super.clearView(recyclerView, viewHolder);
         if (viewHolder instanceof IItemTouchHelperViewHolder) {
-            IItemTouchHelperViewHolder itemTouchHelperViewHolder =
-                    (IItemTouchHelperViewHolder) viewHolder;
-            itemTouchHelperViewHolder.onItemClear();
+
         }
     }
 
